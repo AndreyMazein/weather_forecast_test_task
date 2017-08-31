@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test task Mazein Andrey</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="weather.js"></script>
+
+    <style>
+        .cityScrolArea {
+            margin-top: 15px;
+            width: 100%;
+            overflow: auto;
+            cursor: pointer;
+        }
+        .tab {
+            width: 100%;
+            overflow: auto;
+        }
+        .tablink{
+            width: 20%;
+        }
+
+        #loadGif {
+            position: absolute;
+            top: 300px;
+            left: calc(63% - 40px);
+            display:none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:27%; padding: 15px;">
+        <div>
+            <div style="float: right">
+                <button class="w3-button w3-black" id="addCityButton">Add city</button>
+            </div>
+            <div style="position: relative; margin-right: 110px">
+                <input class="w3-input w3-border w3-round" id="inputCityName" placeholder="Enter city name...">
+            </div>
+
+        </div>
+        <div class="cityScrolArea">
+            <table id="cityList" class="w3-table-all w3-hoverable"></table>
+        </div>
+    </div>
+
+    <img src="4.gif" id="loadGif">
+
+    <div style="margin-left:27%; display: none" id="mainDiv" >
+        <div class="w3-container w3-teal w3-center">
+            <h1 id="nameOfCurrentCity">Name of city</h1>
+            <h3 id="coorOfCurrentCity">Coord of city</h3>
+        </div>
+
+        <div class="w3-row w3-black">
+            <button class="w3-col w3-button tablink w3-light-grey" id="day1">Day1</button>
+            <button class="w3-col w3-button tablink" id="day2">Day2</button>
+            <button class="w3-col w3-button tablink" id="day3">Day3</button>
+            <button class="w3-col w3-button tablink" id="day4">Day4</button>
+            <button class="w3-col w3-button tablink" id="day5">Day5</button>
+        </div>
+
+        <div id="day1Tab" class="tab" ></div>
+        <div id="day2Tab" class="tab" style="display:none"></div>
+        <div id="day3Tab" class="tab" style="display:none"></div>
+        <div id="day4Tab" class="tab" style="display:none"></div>
+        <div id="day5Tab" class="tab" style="display:none"></div>
+    </div>
+
+</body>
+</html>
